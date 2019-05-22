@@ -1,4 +1,4 @@
-<%= link_to "new restaurant", restaurant_new_path, class: "btn btn-primary" %>
+<%= link_to "new restaurant", new_restaurant_path, class: "btn btn-primary" %>
 <% @restaurants.each do |restaurant| %>
   <h2>Task: <%= restaurant.title %></h2>
   <p>Description: <%= restaurant.details %>|| Completed: <%= restaurant.completed %></p>
