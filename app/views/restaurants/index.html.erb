@@ -1,2 +1,7 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<%= link_to "new restaurant", restaurant_new_path, class: "btn btn-primary" %>
+<% @restaurants.each do |restaurant| %>
+  <h2>Task: <%= restaurant.title %></h2>
+  <p>Description: <%= restaurant.details %>|| Completed: <%= restaurant.completed %></p>
+  <%= link_to "edit", restaurant_edit_path(restaurant), class: "btn btn-warning" %>
+  <%= link_to "delete", restaurant_path(restaurant), class: "btn btn-danger", method: :delete %>
+<% end %>
